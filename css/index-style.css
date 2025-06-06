@@ -503,3 +503,28 @@ body {
     line-height: 1.6;
     font-size: 1rem;
 }
+
+.slideshow-container {
+    position: relative;
+    max-width: 90%;
+    margin: 1em auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.fade {
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
