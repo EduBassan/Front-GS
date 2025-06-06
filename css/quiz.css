@@ -1,0 +1,272 @@
+@import url(/Front-GS/reset/reset.css);
+
+:root{
+    --color-azulPetroleo:  #004E64; /*Primária*/
+    --color-verdeVibrante: #47CB8A; /*Secundária*/
+    --color-cianoClaro: #61C7C9; /*Realce*/
+    --color-cinzaMuitoClaro:  #F5F7FA; /*Fundo Claro*/
+    --color-CinzaClaro:#CDD0D6; /*Apoio*/
+    --color-cinzaEscuro: #333333; /*Texto*/
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--color-azulPetroleo);
+}
+
+.comecar-quiz,
+.regras,
+.bloco-inicial,
+.resultado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 8px 0 #02323f,
+                0px 6px 20px 0 #021c24;
+}
+
+.regras{
+    display: none;
+    max-width: 33.75rem;
+    min-width: 30rem;
+    background-color: white;
+    border-style: 5px;
+}
+
+.regras .titulos-regras{
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid var(--color-CinzaClaro);
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.regras .lista-regras{
+    padding: 15px 35px;
+}
+
+.regras .lista-regras .lista{
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+strong{
+    color: var(--color-verdeVibrante);
+    font-weight: 700;
+}
+
+.regras .botoes{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 1px solid var(--color-CinzaClaro);
+}
+
+.regras .botoes button{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border: 2px solid transparent;
+    color: var(--color-cinzaEscuro);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.comecar-quiz button{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--color-azulPetroleo);
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.botoes button.sair{
+    color: var(--color-azulPetroleo);
+    border-color: var(--color-azulPetroleo);
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.botoes button.sair:hover{
+    background-color: #e63636;
+    border: 2px solid #e63636;
+    color: white;
+}
+
+.botoes button.comecar{
+    color: var(--color-cinzaEscuro);
+    border-color: var(--color-verdeVibrante);
+    background-color: var(--color-verdeVibrante);
+    transition: all 0.3s ease;
+}
+
+.botoes button.comecar:hover{
+    background-color: var(--color-azulPetroleo);
+    border: 2px solid var(--color-cianoClaro);
+    color: white;
+}
+
+.bloco-inicial{
+    display: none;
+    background-color: white;
+    width: 57%;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-size: 60px;
+}
+
+.subtitulo{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+h2{
+    padding: 1rem 0;
+}
+
+.quiz{
+    padding: 0.9px 0;
+}
+
+.btn{
+    background-color: var(--color-CinzaClaro);
+    color: var(--color-cinzaEscuro);
+    width: 100%;
+    font-weight: 500;
+    border: 3px solid var(--color-CinzaClaro);
+    padding: 1rem;
+    margin: 0.7rem 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s; 
+}
+
+.btn:hover:not(´[disabled]){
+    background-color: var(--color-azulPetroleo);
+    color: white;
+    border: 3px solid var(--color-cianoClaro);
+}
+
+.btn:disabled{
+    cursor: no-drop;
+}
+
+.btn-proximo{
+    background-color: var(--color-verdeVibrante);
+    color: var(--color-cinzaEscuro);
+    width: 7rem;
+    border: 0;
+    padding: 1rem;
+    margin: 2rem auto 0;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.correct{
+    background-color: #47CB8A;
+}
+
+.incorrect{
+    background-color: #e63636;
+    color: white;
+}
+
+.resultado{
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    max-width: 33rem;
+    min-width: 29rem;
+    padding: 2rem;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-cinzaEscuro);
+}
+
+.titulo-resultado h1{
+    font-weight: 600;
+    width: 100%;
+    margin: 0;
+}
+
+.conteudo h1{
+    margin: 0;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.pontuacao{
+    margin-top: 1rem;
+}
+
+.resultado .btnr button{
+    font-size: 100%;
+    font-weight: 500;
+    padding: 15px 30px;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.reiniciar{
+    background-color: var(--color-verdeVibrante);
+    border: 1px solid var(--color-verdeVibrante);
+    color: var(--color-cinzaEscuro);
+    transition: all 0.3s ease;
+}
+
+.reiniciar:hover{
+    background-color: var(--color-azulPetroleo);
+    border: 2px solid var(--color-cianoClaro);
+    color: white;
+}
+
+.voltar{
+    background-color: white;
+    border: 2px solid var(--color-azulPetroleo);
+    transition: all 0.3s ease;
+}
+
+.voltar:hover{
+    background-color: #e63636;
+    border: 2px solid #e63636;
+    color: white;
+}
+
+

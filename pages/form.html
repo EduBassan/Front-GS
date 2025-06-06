@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Front-GS/css/form.css">
+    <title>Formulário</title>
+</head>
+<body>
+    <div class="conteudo">
+        <h1>Formulário</h1>
+        <form class="form" id="form">
+            <div>
+                <input type="text" placeholder="Digite o seu nome" class="inputs required" oninput="validacaoDoNome()">
+                <span class="alerta">O nome deve conter mais de 3 caracteres</span>
+            </div>
+            <div>
+                <input type="text" placeholder="Digite o seu email" class="inputs required" oninput="validacaoDoEmail()">
+                <span class="alerta">Digite um email válido</span>
+            </div>
+            <div>
+                <input type="text" placeholder="Digite a cidade da sua preferência" class="inputs required" oninput="validacaoDaCidade()">
+                <span class="alerta">O nome da cidade deve ter no minímo 2 dígitos</span>
+            </div>
+            <p>Como você gostaria de participar?</p>
+            <div class="seletor">
+                <div>
+                    <input type="checkbox" id="sistema" value="sistema" name="participacao">
+                    <label for="sistema">Montar o sistema</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="divulgar" value="divulgar" name="participacao">
+                    <label for="divulgar">Divulgar</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="voluntario" value="voluntario" name="participacao">
+                    <label for="voluntario">Ser voluntário em campo</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="conteudo" value="conteudo" name="participacao">
+                    <label for="conteudo">Ajudar com conteúdo</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="doacoes" value="doacoes" name="participacao">
+                    <label for="doacoes">Doações</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="o" value="o" name="participacao">
+                    <label for="o">Outro</label>
+                </div>
+            </div>
+            <p>Você tem experiência com Arduino ou eletrônica?</p>
+            <div class="seletor">
+                <div>
+                    <input type="radio" id="sim" value="sim" name="experiência">
+                    <label for="sim">Sim</label>
+                </div>
+                <div>
+                    <input type="radio" id="nao" value="nao" name="experiência">
+                    <label for="nao">Não</label>
+                </div>
+                <div>
+                    <input type="radio" id="pouco" value="pouco" name="experiência">
+                    <label for="pouco">Um pouco</label>
+                </div>
+            </div>
+            <p>Quantas horas por semana você pode dedicar ao projeto?</p>
+            <div class="seletor">
+                <div>
+                    <input type="radio" id="2h" value="2h" name="tempo">
+                    <label for="2h">Até 2h</label>
+                </div>
+                <div>
+                    <input type="radio" id="2h-5h" value="2h-5h" name="tempo">
+                    <label for="2h-5h">2h-5h</label>
+                </div>
+                <div>
+                    <input type="radio" id="mais" value="mais" name="tempo">
+                    <label for="mais">Mais de 5h</label>
+                </div>
+            </div>
+            <p>Está disponível para encontros presenciais na sua região?</p>
+            <div class="seletor">
+                <div>
+                    <input type="radio" id="s" value="s" name="encontro">
+                    <label for="s">Sim</label>
+                </div>
+                <div>
+                    <input type="radio" id="n" value="n" name="encontro">
+                    <label for="n">Não</label>
+                </div>
+                <div>
+                    <input type="radio" id="depende" value="depende" name="encontro">
+                    <label for="depende">Depende</label>
+                </div>
+            </div>
+            <textarea name="conte-mais" id="conte-mais" placeholder="Conte mais sobre você..." class="inputs"></textarea>
+            <div class="seletor">
+                <div>
+                    <input type="checkbox" name="autorizacao" id="autorizacao" oninput="validacaoDaAutorizacao()">
+                    <label for="autorizacao" style="font-style: italic;">Autorizo o uso dos meus dados para fins de organização do projeto.</label>
+                </div>
+            </div>
+            <span class="alerta">É obrigatório autorizar o uso dos dados</span>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+<script src="/Front-GS/js/form.js"></script>
+</html>
