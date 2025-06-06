@@ -67,7 +67,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Animação do X */
 .hamburger.active .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -80,35 +79,34 @@ body {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
+.hamburger {
+    display: flex;
+}
 
-    .navbar .menu {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        position: absolute;
-        top: 60px;
-        right: 30px;
-        background-color: var(--color-verdeVibrante);
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        transform: translateY(-20px);
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.3s ease;
-        z-index: 999;
-    }
+.navbar .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background-color: var(--color-verdeVibrante);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
 
-    .navbar .menu.active {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: auto;
-    }
+.navbar .menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
 }
 .navbar {
     background-color: var(--color-verdeVibrante);
